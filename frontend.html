@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <litle>Магазин морожного </litle>
+        <style>
+            body{ font-family: Arial, sans-serif; text-align: center;
+            background-color: rgb(0, 255, 30); }
+            h1{color:rgb(255, 0, 0);}
+            select, input, button {padding: 12px; margin: 12px; font-size: 16px;}
+                        button { background-color: rgb(255, 0, 0); color: rgb(255, 0, 0); border: none;
+            cursor: pointer;}
+            button:hover { background-color: rgb(255, 0, 0);}
+            #resulte {color: #153e00; font-size: 18px; margin: 10px;}
+        </style>
+        <h1>закажи морожное пж пж пж пж </h1>
+        <select id="flavor">
+            <option value="mmm">шоколад</option>
+            <option value="ppp">фисташка с клубникой и с крембрюле</option>
+        </select>
+        <input type="number" id="quantiny" placeholder=" kol-wo porciq" min="111">
+        <button onclick="showOrder()" >заказать</button>
+        <div id="message"></div>
+        <script>
+            async function SendOrder() {  
+                const flavor = document.getElementsById('flover').vaule;
+                const quantiny = parseFloat (document.getElementById('flover').vaule)
+                const resultDiv = document.getElementById(result);
+                try{
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify({ flavor: flavor, quantity:quantity})
+ 
+                };
+                const result = await Response.json();
+                resultDiv.innerText = 'print: ${result.message}';
+                resultDiv.className = responte.ok ? 'success' : 'error';
+            } catch (error) {
+                resultDiv.innerText = 'oshibka' :  ${error.message}' ; 
+                resultDiv.className = 'error'
+            }
+        </script>        
+        
+    </head>
+</html>
