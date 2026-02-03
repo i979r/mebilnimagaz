@@ -1,0 +1,10 @@
+name: My first Action
+
+on: [push]
+
+jobs:
+  say-hello:
+    runs-on: ubuntu-lates
+    steps:
+      - name: Print Hello
+        run: ehco 'прив! Я твой CI/CD робот'
