@@ -15,3 +15,5 @@ jobs:
 
             - name: Run tests 
               run: pytest test.py 
+
+            - run: 'все тесты пройдены  успешно! Җәңно деплоитҗ'
