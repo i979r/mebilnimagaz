@@ -6,4 +6,4 @@ def test_math_operation():
 
 def def_string_operation():
     word = 'GitHub'
-    assert len(word) == 6  
+    assert len(word) == 6 

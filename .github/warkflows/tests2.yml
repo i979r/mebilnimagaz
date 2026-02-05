@@ -1,0 +1,16 @@
+name: Run tests2
+on: [push]
+jobs:
+    test-code:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v3
+            - uses: actions/setup-python@v4
+              with:
+                python-version: '3.10'
+
+            - run: pip install pytest
+            - run: pytest test.py 
+
+            - name: Success Message
+              run: echo 'ergw43q4tqtr4'
